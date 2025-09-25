@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Black Squad Gym Website
 
 A modern, responsive gym website with contact form and review system backend.
@@ -99,6 +98,7 @@ blacksquad/
 - Add more features as needed
 
 ## Support
+
 
 =======
 <<<<<<< HEAD
