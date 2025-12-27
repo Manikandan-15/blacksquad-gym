@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Squad Gym</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="public/styles.css">
+</head>
+<body>
+
+  <header>
+    
+    <nav>
+      <div class="logo">
+        <img src="public/image/logo.JPG"  class="logo-img">
+       
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#photos">Gym Photos</a></li>
+        <li><a href="#plans">Membership Plans</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="public/admin.html">Admin</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="https://www.instagram.com/blacksquadfitness?igsh=MXVreHdiYXN1OWY3cw==" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <button class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <h1>Welcome to Black Squad Gym</h1>
+    <p>Unleash your potential in our state-of-the-art fitness center. Join the squad, transform your body, and achieve your goals!</p>
+    <a href="#plans" class="btn">View Membership Plans</a>
+  </section>
+
+  <section id="photos">
+    <h2 style="text-align:center; color:#ffb300; margin-bottom:3rem;">Our Gym Facilities</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openPhotoModal(0)">
+        <img src="public/image/1.jpg" alt="Black Squad Gym - Training Area">
+        <div class="gallery-overlay">
+          <h3>Training Area</h3>
+          <p>Professional training environment</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(1)">
+        <img src="public/image/2.jpg" alt="Black Squad Gym - Equipment">
+        <div class="gallery-overlay">
+          <h3>Modern Equipment</h3>
+          <p>State-of-the-art fitness equipment</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(2)">
+        <img src="public/image/3.jpg" alt="Black Squad Gym - Workout Space">
+        <div class="gallery-overlay">
+          <h3>Workout Space</h3>
+          <p>Spacious and well-equipped facility</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(3)">
+        <img src="public/image/4.jpg" alt="Black Squad Gym - Gym Interior">
+        <div class="gallery-overlay">
+          <h3>Gym Interior</h3>
+          <p>Clean and modern gym environment</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(4)">
+        <img src="public/image/5.jpg" alt="Black Squad Gym - Fitness Equipment">
+        <div class="gallery-overlay">
+          <h3>Fitness Equipment</h3>
+          <p>Professional grade equipment</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(5)">
+        <img src="public/image/6.jpg" alt="Black Squad Gym - Training Zone">
+        <div class="gallery-overlay">
+          <h3>Training Zone</h3>
+          <p>Dedicated training areas</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(6)">
+        <img src="public/image/7.jpg" alt="Black Squad Gym - Gym Facilities">
+        <div class="gallery-overlay">
+          <h3>Gym Facilities</h3>
+          <p>Comprehensive fitness facilities</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openPhotoModal(7)">
+        <img src="public/image/8.jpg" alt="Black Squad Gym - Workout Area">
+        <div class="gallery-overlay">
+          <h3>Workout Area</h3>
+          <p>Perfect space for your fitness journey</p>
+        </div>
+      </div>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Modal -->
+  <div id="photoModal" class="photo-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closePhotoModal()">&times;</button>
+      <button class="modal-nav modal-prev" onclick="changePhoto(-1)">&#10094;</button>
+      <button class="modal-nav modal-next" onclick="changePhoto(1)">&#10095;</button>
+      <img id="modalImage" class="modal-image" src="" alt="">
+      <div class="modal-counter">
+        <span id="photoCounter">1 / 9</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="plans">
+    <h2 style="text-align:center; color:#ffb300;">Membership Plans</h2>
+    <div class="plans">
+      <div class="plan-card">
+        <div class="plan-image">
+          <img src="public/image/1.jpg" alt="Basic Plan">
+        </div>
+        <div class="content">
+          <h3>Basic</h3>
+          <div class="price">$22/mo</div>
+          <ul>
+            <li>Access to gym equipment</li>
+            <li>Locker room</li>
+            <li>1 group class/week</li>
+          </ul>
+          <a href="#contact" class="btn">Join Now</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-image">
+          <img src="public/image/2.jpg" alt="Standard Plan">
+        </div>
+        <div class="content">
+          <h3>Standard</h3>
+          <div class="price">$30/mo</div>
+          <ul>
+            <li>All Basic features</li>
+            <li>Unlimited group classes</li>
+            <li>Personal trainer (1 session/mo)</li>
+            <li>Fitness assessment</li>
+          </ul>
+          <a href="#contact" class="btn">Join Now</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-image">
+          <img src="public/image/4.jpg" alt="Premium Plan">
+        </div>
+        <div class="content">
+          <h3>Premium</h3>
+          <div class="price">$55/mo</div>
+          <ul>
+            <li>All Standard features</li>
+            <li>Nutrition consultation</li>
+            <li>Priority booking</li>
+          </ul>
+          <a href="#contact" class="btn">Join Now</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-image">
+          <img src="public/image/5.jpg" alt="Elite Plan">
+        </div>
+        <div class="content">
+          <h3>Elite</h3>
+          <div class="price">$78/mo</div>
+          <ul>
+            <li>All Premium features</li>
+            <li>Unlimited personal training</li>
+            <li>Exclusive locker</li>
+            <li>Guest passes (2/month)</li>
+          </ul>
+          <a href="#contact" class="btn">Join Now</a>
+        </div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-image">
+          <img src="public/image/6.jpg" alt="VIP Plan">
+        </div>
+        <div class="content">
+          <h3>VIP</h3>
+          <div class="price">$111/mo</div>
+          <ul>
+            <li>All Elite features</li>
+            <li>Private training studio</li>
+            <li>Nutrition meal plans</li>
+          </ul>
+          <a href="#contact" class="btn">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2 style="text-align:center; color:#ffb300; margin-bottom:3rem;">What Our Members Say</h2>
+    
+    <!-- Add Review Section - Prominent at Top -->
+    <div class="add-review-section">
+      <div class="review-form-hero">
+        <h3 style="text-align:center; color:#ffb300; margin-bottom:1rem; font-size:1.8rem;">Share Your Experience</h3>
+        <p style="text-align:center; color:#ccc; margin-bottom:2rem;">Help others discover the amazing Black Squad community!</p>
+        <form class="review-form" id="reviewForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="reviewName" name="reviewName" placeholder="Enter your full name" required style="min-height: 50px; font-size: 1rem;">
+              <label for="reviewName">Your Name</label>
+            </div>
+            <div class="form-group">
+              <select id="reviewRating" name="reviewRating" required style="min-height: 50px; font-size: 1rem;">
+                <option value="" disabled selected hidden></option>
+                <option value="5">★★★★★ (5 Stars)</option>
+                <option value="4">★★★★☆ (4 Stars)</option>
+                <option value="3">★★★☆☆ (3 Stars)</option>
+                <option value="2">★★☆☆☆ (2 Stars)</option>
+                <option value="1">★☆☆☆☆ (1 Star)</option>
+              </select>
+              <label for="reviewRating">Rating</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="reviewText" name="reviewText" rows="4" placeholder="Tell us about your experience at Black Squad Gym... What did you love? How has it helped you?" required></textarea>
+            <label for="reviewText">Your Review</label>
+          </div>
+          <button type="submit" class="btn">Submit Review</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Existing Reviews Section -->
+    <div class="existing-reviews">
+      <h3 style="text-align:center; color:#ffb300; margin:3rem 0 2rem 0;">Member Testimonials</h3>
+      <div class="reviews-wrapper">
+        <button class="review-nav-btn review-nav-prev" onclick="scrollReviews('left')">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="reviews-container" id="reviewsContainer">
+          <!-- Reviews will be loaded dynamically -->
+        </div>
+        <button class="review-nav-btn review-nav-next" onclick="scrollReviews('right')">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-hero">
+      <h2 style="text-align:center; color:#ffb300; margin-bottom:1rem; font-size:2.5rem;">Get In Touch</h2>
+      <p style="text-align:center; color:#ccc; margin-bottom:1rem; font-size:1.2rem; max-width:600px; margin-left:auto; margin-right:auto;">
+        Ready to start your fitness journey? We're here to help! Reach out to us for membership inquiries, class schedules, or any questions you might have.
+      </p>
+     
+    </div>
+
+    <div class="contact-container">
+      <!-- Contact Information Cards -->
+      <div class="contact-info-section">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Visit Us</h3>
+          <p>Amutham motors upstairs</p>
+          <p>Opposite arni, Arani Palayam</p>
+          <p>Enmahal, Tamil Nadu 632301</p>
+          <p>India</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Call Us</h3>
+          <p><a href="tel:+919791864691" class="contact-link">+91 97918 64691</a></p>
+          <p style="color:#ccc; font-size:0.9rem;">Mon-Sat: 6AM-10PM</p>
+          <p style="color:#ccc; font-size:0.9rem;">Sunday: 8AM-8PM</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email Us</h3>
+          <p><a href="mailto:manikandan719mm@gmail.com" class="contact-link">manidinakaran23@gmail.com</a></p>
+          <p style="color:#ccc; font-size:0.9rem;">We'll respond within 24 hours</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <h3><a href="https://www.instagram.com/blacksquadfitness?igsh=MXVreHdiYXN1OWY3cw==" target="_blank" style="color:#ffb300; text-decoration: none; cursor: pointer; transition: all 0.3s ease;">Follow Us</a></h3>
+          <p><a href="https://www.instagram.com/blacksquadfitness?igsh=MXVreHdiYXN1OWY3cw==" target="_blank" class="contact-link">@blacksquadgym</a></p>
+          <p style="color:#ccc; font-size:0.9rem;">Daily updates & motivation</p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-section">
+        <div class="contact-form-container">
+          <h3 style="color:#ffb300; margin-bottom:2rem; text-align:center;">Send Us a Message</h3>
+          
+          <form class="contact-form" autocomplete="off" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" name="name" required placeholder=" ">
+                <label for="name">Full Name</label>
+                <div class="form-icon">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <input type="email" id="email" name="email" required placeholder=" ">
+                <label for="email">Email Address</label>
+                <div class="form-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" required placeholder=" ">
+                <label for="phone">Phone Number</label>
+                <div class="form-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected hidden></option>
+                  <option value="membership">Membership Inquiry</option>
+                  <option value="classes">Class Schedule</option>
+                  <option value="personal-training">Personal Training</option>
+                  <option value="general">General Question</option>
+                  <option value="feedback">Feedback</option>
+                </select>
+                <label for="subject">Subject</label>
+                <div class="form-icon">
+                  <i class="fas fa-tag"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+              <label for="message">Your Message</label>
+              <div class="form-icon textarea-icon">
+                <i class="fas fa-comment"></i>
+              </div>
+            </div>
+
+           
+
+            <button type="submit" class="btn contact-submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">
+                <i class="fas fa-paper-plane"></i>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="contact-message" class="contact-message" style="display: none;"></div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+      this.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 768) {
+          navMenu.classList.remove('active');
+        }
+      });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('nav') && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+      }
+    });
+    
+    // Smooth scroll for nav links (for browsers that don't support CSS scroll-behavior)
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Contact form handler with backend
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      // Get form data
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+      
+      // Show loading state
+      const submitBtn = this.querySelector('.contact-submit-btn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<span class="btn-text">Sending...</span><span class="btn-icon"><i class="fas fa-spinner fa-spin"></i></span>';
+      submitBtn.disabled = true;
+      
+      // Hide any existing messages
+      const messageDiv = document.getElementById('contact-message');
+      messageDiv.style.display = 'none';
+      
+      // Validate form data
+      if (!name || !email || !phone || !subject || !message) {
+        showMessage('Please fill in all fields.', 'error');
+        resetButton();
+        return;
+      }
+      
+      // Terms checkbox removed — no consent required here
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showMessage('Please enter a valid email address.', 'error');
+        resetButton();
+        return;
+      }
+      
+      // Phone validation
+      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+      if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
+        showMessage('Please enter a valid phone number.', 'error');
+        resetButton();
+        return;
+      }
+      
+      const formData = { 
+        name, 
+        email, 
+        phone, 
+        subject, 
+        message 
+      };
+      
+      try {
+        console.log('Sending contact form data:', formData);
+        
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+        
+        console.log('Response status:', response.status);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const result = await response.json();
+        console.log('Response result:', result);
+        
+        if (result.success) {
+          showMessage(result.message, 'success');
+          this.reset();
+          // Reset form labels
+          document.querySelectorAll('.form-group label').forEach(label => {
+            label.style.top = '1.1rem';
+            label.style.left = '1.1rem';
+            label.style.fontSize = '1.08rem';
+            label.style.color = '#ffb300';
+            label.style.background = 'transparent';
+            label.style.padding = '0';
+            label.style.boxShadow = 'none';
+          });
+        } else {
+          showMessage('Error: ' + result.message, 'error');
+        }
+      } catch (error) {
+        console.error('Contact form error:', error);
+        showMessage('Failed to send message. Please check your connection and try again.', 'error');
+      }
+      
+      resetButton();
+    });
+    
+    function showMessage(message, type) {
+      const messageDiv = document.getElementById('contact-message');
+      messageDiv.textContent = message;
+      messageDiv.className = `contact-message ${type}`;
+      messageDiv.style.display = 'block';
+      
+      // Auto-hide success messages after 5 seconds
+      if (type === 'success') {
+        setTimeout(() => {
+          messageDiv.style.display = 'none';
+        }, 5000);
+      }
+    }
+    
+    function resetButton() {
+      const submitBtn = document.querySelector('.contact-submit-btn');
+      submitBtn.innerHTML = '<span class="btn-text">Send Message</span><span class="btn-icon"><i class="fas fa-paper-plane"></i></span>';
+      submitBtn.disabled = false;
+    }
+    
+    // Review Carousel Navigation
+    function scrollReviews(direction) {
+      const container = document.getElementById('reviewsContainer');
+      const scrollAmount = 360; // One card width + gap
+      
+      if (direction === 'left') {
+        container.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        });
+      } else if (direction === 'right') {
+        container.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        });
+      }
+    }
+    
+    // Photo Modal Variables
+    let currentPhotoIndex = 0;
+    const photos = [
+      { src: 'IMG-20250720-WA0004.jpg', title: 'Training Area' },
+      { src: 'IMG-20250720-WA0012.jpg', title: 'Modern Equipment' },
+      { src: 'IMG-20250720-WA0014.jpg', title: 'Workout Space' },
+      { src: 'IMG-20250720-WA0016.jpg', title: 'Gym Interior' },
+      { src: 'IMG-20250720-WA0019.jpg', title: 'Fitness Equipment' },
+      { src: 'IMG-20250720-WA0023.jpg', title: 'Training Zone' },
+      { src: 'IMG-20250720-WA0027.jpg', title: 'Gym Facilities' },
+      { src: 'IMG-20250720-WA0029.jpg', title: 'Workout Area' },
+      { src: 'IMG-20250720-WA0032.jpg', title: 'Training Environment' }
+    ];
+
+    // Photo Modal Functions
+    function openPhotoModal(index) {
+      currentPhotoIndex = index;
+      const modal = document.getElementById('photoModal');
+      const modalImage = document.getElementById('modalImage');
+      const photoCounter = document.getElementById('photoCounter');
+      
+      modalImage.src = photos[index].src;
+      modalImage.alt = photos[index].title;
+      photoCounter.textContent = `${index + 1} / ${photos.length}`;
+      
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoModal');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    function changePhoto(direction) {
+      currentPhotoIndex = (currentPhotoIndex + direction + photos.length) % photos.length;
+      const modalImage = document.getElementById('modalImage');
+      const photoCounter = document.getElementById('photoCounter');
+      
+      modalImage.src = photos[currentPhotoIndex].src;
+      modalImage.alt = photos[currentPhotoIndex].title;
+      photoCounter.textContent = `${currentPhotoIndex + 1} / ${photos.length}`;
+    }
+
+    // Close modal when clicking outside
+    document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closePhotoModal();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('photoModal');
+      if (modal.style.display === 'block') {
+        if (e.key === 'Escape') {
+          closePhotoModal();
+        } else if (e.key === 'ArrowLeft') {
+          changePhoto(-1);
+        } else if (e.key === 'ArrowRight') {
+          changePhoto(1);
+        }
+      }
+    });
+
+    // Review Management Functions
+    async function loadReviews() {
+      try {
+        const response = await fetch('/api/reviews');
+        const result = await response.json();
+        
+        if (result.success) {
+          displayReviews(result.reviews);
+        } else {
+          console.error('Failed to load reviews:', result.message);
+        }
+      } catch (error) {
+        console.error('Error loading reviews:', error);
+      }
+    }
+
+    function displayReviews(reviews) {
+      const container = document.getElementById('reviewsContainer');
+      container.innerHTML = '';
+      
+      if (reviews.length === 0) {
+        container.innerHTML = '<p style="text-align: center; color: #ccc; grid-column: 1 / -1;">No reviews yet. Be the first to share your experience!</p>';
+        return;
+      }
+      
+      reviews.forEach(review => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card';
+        reviewCard.dataset.reviewId = review.id;
+        
+        const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+        const reviewDate = new Date(review.date).toLocaleDateString();
+        
+        reviewCard.innerHTML = `
+          <div class="stars">${stars}</div>
+          <p>"${review.text}"</p>
+          <div class="reviewer">
+            <strong>${review.name}</strong>
+            <span class="review-date">${reviewDate}</span>
+          </div>
+          <div class="review-actions">
+            <span class="review-date">Posted on ${reviewDate}</span>
+            <button class="delete-review-btn" onclick="deleteReview('${review.id}')">
+              <i class="fas fa-trash"></i> Delete
+            </button>
+          </div>
+        `;
+        
+        container.appendChild(reviewCard);
+      });
+    }
+
+    async function deleteReview(reviewId) {
+      if (!confirm('Are you sure you want to delete this review?')) {
+        return;
+      }
+      
+      try {
+        const response = await fetch(`/api/reviews/${reviewId}`, {
+          method: 'DELETE'
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          // Remove the review card from DOM
+          const reviewCard = document.querySelector(`[data-review-id="${reviewId}"]`);
+          if (reviewCard) {
+            reviewCard.style.opacity = '0';
+            reviewCard.style.transform = 'translateY(-20px)';
+            setTimeout(() => {
+              reviewCard.remove();
+              // Reload reviews to update the display
+              loadReviews();
+            }, 300);
+          }
+          alert('Review deleted successfully!');
+        } else {
+          alert('Error: ' + result.message);
+        }
+      } catch (error) {
+        console.error('Error deleting review:', error);
+        alert('Failed to delete review. Please try again.');
+      }
+    }
+
+    // Update review form handler to reload reviews after submission
+    document.getElementById('reviewForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('reviewName').value;
+      const rating = document.getElementById('reviewRating').value;
+      const review = document.getElementById('reviewText').value;
+      
+      if (name && rating && review) {
+        try {
+          // Send to backend
+          const response = await fetch('/api/review', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              reviewName: name,
+              reviewRating: rating,
+              reviewText: review
+            })
+          });
+          
+          const result = await response.json();
+          
+          if (result.success) {
+            // Reset form
+            this.reset();
+            
+            // Reload reviews to show the new review
+            await loadReviews();
+            
+            // Show success message
+            alert(result.message);
+          } else {
+            alert('Error: ' + result.message);
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          alert('Failed to submit review. Please try again later.');
+        }
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Active navigation highlighting
+    function updateActiveNav() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('nav ul li a');
+      
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    // Navbar entrance animation
+    function animateNavbar() {
+      const nav = document.querySelector('nav');
+      const navItems = document.querySelectorAll('nav ul li');
+      
+      navItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(-20px)';
+        
+        setTimeout(() => {
+          item.style.transition = 'all 0.5s ease';
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 200 + (index * 100));
+      });
+    }
+
+    // Add touch-friendly interactions
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load reviews when page loads
+      loadReviews();
+      
+      // Animate navbar on page load
+      animateNavbar();
+      
+      // Update active nav on scroll
+      window.addEventListener('scroll', updateActiveNav);
+      
+      // Add touch feedback to buttons
+      const buttons = document.querySelectorAll('.btn, .plan-card, .gallery img');
+      buttons.forEach(button => {
+        button.addEventListener('touchstart', function() {
+          this.style.transform = 'scale(0.95)';
+        });
+        button.addEventListener('touchend', function() {
+          this.style.transform = '';
+        });
+      });
+      
+      // Add hover effect to Instagram icon
+      const instagramIcon = document.querySelector('a[href*="instagram"]');
+      if (instagramIcon) {
+        instagramIcon.addEventListener('mouseenter', function() {
+          this.style.color = '#fff';
+          this.style.transform = 'scale(1.2)';
+        });
+        instagramIcon.addEventListener('mouseleave', function() {
+          this.style.color = '#ffb300';
+          this.style.transform = 'scale(1)';
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
