@@ -215,6 +215,11 @@ app.delete('/api/reviews/:id', async (req, res) => {
 });
 
 
-// Start server
+
+// 1. Use the port Render gives you, OR default to 3000 for local testing
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '127.0.0.1', () => console.log(`Server running on port ${PORT} (IPv4)`));
+
+// 2. Add '0.0.0.0' to allow external access (CRITICAL for Render)
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server running on port ${PORT}`);
+});
