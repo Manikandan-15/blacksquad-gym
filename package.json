@@ -13,7 +13,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "multer": "^1.4.5-lts.1",
-    "sqlite3": "^5.1.6"
+    "pg": "^8.11.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
@@ -21,4 +21,5 @@
   "keywords": ["gym", "website", "contact-form", "email"],
   "author": "Black Squad Gym",
   "license": "MIT"
+
 }
